@@ -20,6 +20,29 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+    input[type="search"]{
+        text-align:center;
+    }
+    .dropdown-toggle::after {
+    display:none;
+    }
+    .OR{
+    position: absolute;
+    top: -10px;
+    left: 45%;
+    padding: 0 10px;
+    background-color: white;
+    font-weight: bold;
+    color: #918E8E;
+    font-size: 13px;
+    }
+    .navbar-nav .nav-item .nav-link i{
+        font-size:22px;
+        color: black;
+        margin-right:5px;
+    }
+</style>
 </head>
 <body>
     <div id="app">        
@@ -33,7 +56,7 @@
             <nav class="navbar navbar-expand navbar-light bg-white shadow-sm">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        Instagram
+                    <img src="/image/ig-logo.png" width="100px" height="40px">
                     </a>
 
                     <form class="form-inline mx-auto d-none d-md-inline">
@@ -42,20 +65,20 @@
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="#"><i class="fas fa-home"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Message</a>
+                            <a class="nav-link" href="#"><i class="far fa-paper-plane"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Explore</a>
+                            <a class="nav-link" href="#"><i class="far fa-compass"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Notification</a>
+                            <a class="nav-link" href="#"><i class="far fa-heart"></i></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <img src="/image/profile_image/{{ Auth::user()->image }}" width="22px" height="22px" class="rounded-circle">
+                                <img src="/image/profile_image/{{ Auth::user()->image }}" width="25px" height="25px" class="rounded-circle border">
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

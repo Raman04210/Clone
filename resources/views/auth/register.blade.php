@@ -4,9 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-4 bg-white shadow-sm border p-5 text-center">
-                    <h1>Instagram</h1>
-                    <h4 class="text-muted my-3">Sign up to see photos and videos from your friends.</h4>
+                    <img src="/image/ig-logo.png" style="width: 80%;">
+                    <h5 class="font-weight-bold text-muted mt-2 mb-4 px-3">Sign up to see photos and videos from your friends.</h5>
+                    <a href="#" class="btn btn-block btn-primary mb-4"><i class="fab fa-facebook-square" style="font-size:1.2rem"></i><strong>&nbsp;&nbsp;Log in with Facebook</strong></a>
+                    <div style="position: relative; margin: 30px 0 ;">
                     <hr>
+                    <p class="OR">OR</p>
+                    </div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
